@@ -1,6 +1,6 @@
 #cardThankyou {
     position: relative;
-    width: 30%;
+    width: 80%;
     max-width: 100%;
     padding: 30px;
     margin: 0 auto;
@@ -54,12 +54,13 @@ body {
 }
 .text-overlay {
     position: absolute;
-    top: 35%;
-    left: 36%;
+    font-size: 82%;
+    top: 36%;
+    left: 42%;
     transform: translate(-50%, -50%);
     text-align: left;
     color: black; /* Set text color */
-    padding: 8%;
+    padding: 0%;
     font-weight: 10;
     border-radius: 20;
     max-width: 80%; /* Adjust the width as needed */
