@@ -54,7 +54,7 @@ body {
 }
 .text-overlay {
     position: absolute;
-    font-size: 82%;
+    font-size: 70%;
     top: 36%;
     left: 42%;
     transform: translate(-50%, -50%);
