@@ -14,9 +14,10 @@
 }
 
 
-div{
+div {
     display: block;
 }
+
 #bgCover {
     width: 100%;
     height: 0%;
@@ -32,12 +33,15 @@ div{
 body {
     display: block;
     position: relative;
+    margin: 0;
+    padding: 0;
     width: 100%;
     height: 100%;
     line-height: 1.5;
     font-family: 'Noto Sans TC', Arial, '\5FAE\8EDF\6B63\9ED1\9AD4', 'Microsoft JhengHei', '\7D30\660E\9AD4', MingLiU, sans-serif;
     /* color: var(--secondary-text-color); */
 }
+
 #thankyouTicket .main-content[data-v-6094d602] {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -52,6 +56,7 @@ body {
     margin-left: 17%;
     width: 58%;
 }
+
 .text-overlay {
     position: absolute;
     font-size: 65%;
@@ -59,23 +64,35 @@ body {
     left: 42%;
     transform: translate(-50%, -50%);
     text-align: left;
-    color: black; /* Set text color */
+    color: black;
+    /* Set text color */
     padding: 0%;
     font-weight: 10;
     border-radius: 20%;
-    max-width: 80%; /* Adjust the width as needed */
+    max-width: 80%;
+    /* Adjust the width as needed */
 }
+
 .text-overlay p {
     margin: 0;
     font-weight: lighter;
 }
-.clearfix{
+
+.clearfix {
     display: flex;
     flex-direction: row;
-    margin-left: 10%;
-}
-.clearfix > div {
-    width: 10%;
-    margin: 1%;
     margin-top: 2%;
+    margin-left: 7%;
+    max-width: 10%;
+    height: auto;
+}
+
+.clearfix div {
+    margin-right: 15%;
+
+}
+
+.clearfix div:last-child {
+    margin-right: 0;
+
 }
