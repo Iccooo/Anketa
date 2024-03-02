@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Input</title>
+</head>
+<body>
+    <h2>napishi koda</h2>
+    <form id="textForm">
+        <label for="text_input">koda tuk napishi:</label><br>
+        <input type="text" id="text_input" name="user_text"><br><br>
+        <input type="button" value="Davai ai" onclick="submitText()">
+    </form>
+
+    <script>
+        function submitText() {
+            var text = document.getElementById("text_input").value;
+            var url = "sanwich_2.html?user_text=" + encodeURIComponent(text);
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

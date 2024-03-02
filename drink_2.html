@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>McDonalds</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var currentDate = new Date();
+
+            var futureDate = new Date(currentDate);
+            futureDate.setDate(currentDate.getDate() + 14);
+
+            var modifiedDate = new Date(currentDate);
+            modifiedDate.setMinutes(currentDate.getMinutes() - 8);
+
+            var options_2 = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+            var formattedModifiedDate = `${modifiedDate.getFullYear()}-${(modifiedDate.getMonth() + 1).toString().padStart(2, '0')}-${modifiedDate.getDate().toString().padStart(2, '0')} ${modifiedDate.getHours().toString().padStart(2, '0')}:${modifiedDate.getMinutes().toString().padStart(2, '0')}:${modifiedDate.getSeconds().toString().padStart(2, '0')}`;
+
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            var formattedFutureDate = `${futureDate.getFullYear()}-${(futureDate.getMonth() + 1).toString().padStart(2, '0')}-${futureDate.getDate().toString().padStart(2, '0')}`;
+
+            var futureDateString = 'Ваучерът е валиден до: ' + formattedFutureDate;
+            var futureParagraphElement = document.getElementById('futureDate');
+
+            var modifiedDateTimeString = 'Време на покупка: ' + formattedModifiedDate;
+            var modifiedDateTimeParagraphElement = document.getElementById('modifiedDateTime');
+
+            futureParagraphElement.textContent = futureDateString;
+            modifiedDateTimeParagraphElement.textContent = modifiedDateTimeString;
+        });
+    </script>
+</head>
+
+<body>
+    <div data-v-7ba5bd90="" id="app">
+        <div data-v-e62bf37c="" data-v-7ba5bd90="" id="thankyouContainer">
+            <div data-v-e62bf37c="" id="bgCover"
+                style="background-image: url(&quot;https://s3-eu-west-1.amazonaws.com/automation.isc-mcd.svy.do--voc/public/bg/bg-thankyou.jpg&quot;);">
+                <section id="sectionThankyou" class="d-lg-flex align-items-lg-center">
+                    <div id="cardThankyou" class="color-bg-white color-main-content">
+                        <div class="text-left">
+                            <div class="site-brand">
+                                <div class="brand-img">
+                                    <div><img src="mcdonalds_logo.png" alt="mcdonalds_logo"
+                                            style="width: 40px; height: 40px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="color-main-content"><strong>БЛАГОДАРИМ ВИ ЗА ОБРАТНАТА ВРЪЗКА! </strong></h2><!---->
+                        <hr class="color-border-main">
+                        <div data-v-6094d602="" id="thankyouTicket" class="color-font-white">
+
+                            <div data-v-6094d602="" class="bg-coupon"><img data-v-6094d602=""
+                                    src="https://s3-eu-west-1.amazonaws.com/automation.isc-mcd.svy.do--voc/public/bg/bg-coupon.png?1700910108509"
+                                    crossorigin="anonymous" width="95%" height="200%">
+                            </div>
+                            <div data-v-6094d602="" class="content-container">
+                                <div data-v-6094d602="" class="side-left color-bg-secondary"><!----><i
+                                        data-v-6094d602="" class="icon icon-coffee"></i></div>
+                                <div data-v-6094d602="" class="main-content">
+                                    <div class="text-overlay">
+                                        <h3 data-v-6094d602="" id="couponText" class="coupon-font-color">
+                                            <p data-v-6094d602="">Като благодарност получавате по избор кафе, чай или
+                                                малка
+                                                напитка 250 мл. (Кока-Кола, Кока-Кола Зиро, Фанта, Спрайт или студен чай
+                                                Липтън) при представяне на ваучера и касовата бележка, използвана за
+                                                анкетата.
+                                            </p><br>
+                                            <div id="display_text">
+
+                                                <script>
+                                                    var urlParams = new URLSearchParams(window.location.search);
+                                                    var userText = urlParams.get('user_text');
+                                                    document.getElementById('display_text').innerText = userText;
+                                                </script>
+                                            </div>
+                                        </h3>
+                                    </div>
+
+
+                                </div>
+                                <div data-v-6094d602="" class="create-time"></div>
+                            </div>
+                        </div>
+                        <div class="color-main-content">
+                            <div>
+                                <p id="futureDate">
+                                <p id="modifiedDateTime"></p>
+                            </div>
+
+                            <div class="reward-img"><img
+                                    src="https://s3-eu-west-1.amazonaws.com/automation.isc-mcd.svy.do--voc/public/bg/coupon-image.png">
+                            </div>
+                            <div class="notice">Покажете този ваучер принтиран или в електронен вариант</div>
+                        </div>
+                        <div class="clearfix">
+                            <div><a href="javascript:void(0);"><img
+                                        src="data:image/png;base64,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"
+                                        alt=""></a></div>
+                            <div><a><img src="data:image/png;base64,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"
+                                        alt=""></a></div>
+                            <div><a>
+                                    <img src="icon-apple-wallet.d261464d.png" alt=""></a></div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
